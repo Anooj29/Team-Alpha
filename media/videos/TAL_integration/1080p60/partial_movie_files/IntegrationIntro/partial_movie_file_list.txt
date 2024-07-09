@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/TAL_integration/1080p60/partial_movie_files/IntegrationIntro/3529212410_984040289_223132457.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/TAL_integration/1080p60/partial_movie_files/IntegrationIntro/3040924799_2475379470_4146197911.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/TAL_integration/1080p60/partial_movie_files/IntegrationIntro/3040924799_2826903069_1805611759.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/TAL_integration/1080p60/partial_movie_files/IntegrationIntro/3040924799_1701590718_1821913103.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/TAL_integration/1080p60/partial_movie_files/IntegrationIntro/3040924799_3890345977_2067723751.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/TAL_integration/1080p60/partial_movie_files/IntegrationIntro/3040924799_2981341494_1170148643.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/TAL_integration/1080p60/partial_movie_files/IntegrationIntro/3040924799_3890345977_560641979.mp4'
