@@ -1,0 +1,104 @@
+09-07-2024
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Python Installation: (2 ways)
+     => From browser :  Download python installer from official python Website
+                        Make sure to add Python to your PATH during the installation of the           
+                        python installer. 
+     => Using Chocolatey
+       (Software management automation) : >>Install Chocolatey using the command from the 
+                        official site. 
+
+                        { Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+                         }
+                         
+                         >>Complete the installation
+                         >>Check the version
+                         >>To install python using Chocolatey use the following command in the windows shell
+                         
+                         { "choco install python" }
+
+                         >>Add python to PATH variable by visiting environment variable settings                 
+                         Locate the Python Installation Path:
+                         The default installation path is usually C:\PythonXX or C:\Users\<YourUsername>\AppData\Local\Programs\Python\PythonXX, where XX is the Python version number.
+
+                         Open System Properties:
+                         Right Click My PC, go to system properties.
+
+                         Open Environment Variables:
+                         In the System Properties window, go to the "Advanced" tab and click on "Environment Variables".
+
+                         Edit the PATH Variable:
+                         In the Environment Variables window, find the "Path" variable in the "System variables" section, select it, and click "Edit".
+
+                         Add Python to the PATH:
+                         In the Edit Environment Variable window, click "New" and add the path to the Python executable (e.g., C:\Users\<YourUsername>\AppData\Local\Programs\Python 
+                         \PythonXX).                     
+                         Also add the path to the Scripts directory (e.g., C:\Users\<YourUsername>\AppData\Local\Programs\Python\PythonXX\Scripts).
+
+                         Apply Changes:
+                         Click "OK" to close each dialog box.
+
+                         >>Check pip installation, if not manually install pip.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+IDE [Integrated Development Environment]:
+         => An integrated development environment (IDE) is a software application that helps programmers develop software code efficiently.
+                         
+                         >>Source code editor: A text editor assisting in writing software code. Syntax highlighting with visual cues, providing language specific auto-completion, and
+                         checks for bugs.
+                         >>Local build automation: Utilities that automate simple, repeatable tasks like compiling computer source code into binary code, packaging binary code, and running  
+                         automated tests.
+                         >>Debugger: A program for testing other programs that can graphically display the location of a bug in the original code.
+
+                         >>Popular IDE's include Visual Studio Code, Eclipse, PyCharm, Adobe Dreamweaver
+
+         => Difference between text-editor and IDE: 
+                         >>An integrated development environment (IDE) is a more advanced version of a text editor that provides a more complete development experience:
+                         >>Text editors
+                         Offer basic features like syntax highlighting, file management, and cut, copy, and paste. They can be sufficient for smaller projects or for those who prefer a 
+                         more hands-on approach. However, programmers may need to leave the text editor to build a complete application after writing and editing the code.
+                         >>IDEs
+                         Provide more comprehensive features, such as debugging tools, project management, automated refactoring, and intelligent code completion. They also include    
+                         features that support software development, like detecting and highlighting code based on the file type, installing linters to check syntax, and previewing code as  
+                         you type it. IDEs are typically a complete package of tools in a cohesive environment needed to build applications. 
+         
+         => Visual Studio and PyCharm
+                         >>Visual Studio: Developed by Microsoft, primarily used as IDE, supports many languages through extension.
+                         >>Features: Advanced debugging, Built-in support for C#, C++, Python, JavaScript etc, Strong integration with Azure, Rich set of tools, Version control integration
+                         >>PyCharm: Developed by JetBrains, Specialised IDE for Python.
+                         >>Features: Integrated Debugger and test runner, support web development, built-in tools for scientific development, database tools and SQL support.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Virtual Environment for Python : 
+         => A virtual environment is a tool that helps to keep dependencies required by different projects separate by creating isolated Python virtual environments for them. This is one of the most important tools that most Python developers use. 
+                         >>We use a module named virtualenv which is a tool to create virtual environments in Python, isolated from system environment Python.
+                         virtualenv creates a folder that contains all the necessary executables to use the packages that a Python project would need.
+                         >>Installing virtualenv
+                         $ pip install virtualenv
+                         >>Test your installation:
+                         $ virtualenv --version
+                         >>Create a new Virtual Environment
+                         You can create a virtualenv using the following command:
+                         $ virtualenv my_env
+                         After running this command, a directory named my_env will be created. This is the directory that contains all the necessary executables to use the packages that a 
+                         Python project would need.    
+                         This is where Python packages will be installed. If you want to specify the Python interpreter of your choice, for example, Python 3, it can be done using the 
+                         following command:
+                         $ virtualenv -p /usr/bin/python3 virtualenv_name
+                         >>Activating a Virtual Environment in Python
+                         Now after creating a virtual environment, you need to activate it. Remember to activate the relevant virtual environment every time you work on the project. This 
+                         can be done using the following command:
+                         >>Activate a Virtual Environment on Windows
+                         To activate virtual environment using windows command prompt change directory to your virtual env, Then use the below command
+                         $ cd <envname>
+                         $ Scripts\activate
+
+                        
+
+
+
+
+
+
+                         
+                          
+                         
