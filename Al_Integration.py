@@ -68,6 +68,4 @@ class IntegrationIntro(Scene):
 			self.wait(1)
 
 		area = axes.get_area(curve, x_range=(0, 9), color=BLUE)
-		self.play(Create(area),run_time=3)
-
-
+		self.play(Create(area))
