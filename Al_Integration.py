@@ -1,3 +1,4 @@
+from typing_extensions import runtime
 from manim import *
 from manim.utils.color.X11 import BLUE2
 
@@ -68,4 +69,4 @@ class IntegrationIntro(Scene):
 			self.wait(1)
 
 		area = axes.get_area(curve, x_range=(0, 9), color=BLUE)
-		self.play(Create(area))
+		self.play(Create(area), runtime=3)
