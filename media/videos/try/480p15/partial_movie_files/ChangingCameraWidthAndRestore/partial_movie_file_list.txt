@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/try/480p15/partial_movie_files/ChangingCameraWidthAndRestore/4279572049_315711827_3962344288.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/try/480p15/partial_movie_files/ChangingCameraWidthAndRestore/3354938327_3156131044_1027509969.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/try/480p15/partial_movie_files/ChangingCameraWidthAndRestore/3354938327_2144201532_2188750376.mp4'
