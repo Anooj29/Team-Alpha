@@ -73,8 +73,8 @@ class IntegrationIntro(Scene):
 				
 		rects_list = []
 
-		for i in range(1,4):
-			num_rects = 6 ** i
+		for i in range(1,6):
+			num_rects = 3 ** i
 			rectangles = makeRect(num_rects)
 			rects_list.append(rectangles)
 

@@ -1,0 +1,182 @@
+Notes: 11/07/2024
+
+Git:
+
+	Git is a distributed version control system used to track changes in source code during software development. It allows multiple developers to work on a project simultaneously without interfering with each other's work.
+
+	Key Concepts:
+		Repository: A directory tracked by Git.
+		Commit: A snapshot of changes with a message.
+		Branch: A parallel version of the repository.
+		Merge: Combining changes from different branches.
+		Clone: Copying an existing repository.
+		Pull: Fetching and merging changes from a remote repo.
+		Push: Sending your local changes to a remote repo.	
+
+
+Github:
+
+	GitHub is a web-based platform that uses Git for version control and provides additional features to facilitate collaborative software development.
+
+	Key Concepts:
+		Repositories: Host and manage Git repositories.
+		Issues: Track bugs, enhancements, and other tasks.
+		Pull Requests: Propose, review, and merge changes.
+		Forking: Create a personal copy of someone else's repository.
+		Branches: Work on different versions of the project simultaneously.
+		Actions: Automate workflows with CI/CD pipelines.
+		Projects: Organize tasks with project boards.
+		Wikis: Document your project collaboratively.
+		Collaborators: Invite others to work on your repository.
+
+
+Difference Between Git and Github:
+	
+	Git:
+
+		Type: Distributed version control system.
+
+		Purpose: Tracks changes in source code during development.
+
+		Usage: Command-line tool used locally on a developer's machine.
+
+		Key Features:
+			Version control
+			Branching and merging
+			Commit history
+			Commands: git init, git add, git commit, git branch, git merge, git pull, git push
+
+	GitHub:
+
+		Type: Web-based platform and service.
+
+		Purpose: Hosts Git repositories and enhances collaboration.
+
+		Usage: Web interface and integrations for managing Git repositories online.
+
+		Key Features:
+			Repository hosting
+			Pull requests
+			Issue tracking
+			Collaboration tools (e.g., forks, stars)
+			GitHub Actions for CI/CD
+			Project boards and wikis
+			Web Interface: Allows for code review, discussions, and project management.
+
+
+Git Commands:
+
+	git init:
+		Initializes a new Git repository in the current directory.
+
+	git add:
+		Adds changes from the working directory to the staging area.
+
+	git commit:
+		Records changes from the staging area into the repository with a descriptive message.
+
+	git status:
+		Shows the current status of the repository, including files that are staged, unstaged, or untracked.
+
+	git diff:
+		Displays differences between changes in the working directory, staging area, and the last commit.
+
+	git log:
+		Lists the commit history, showing authorship, dates, and commit messages.
+
+	git branch:
+		Lists, creates, or deletes branches. Branches allow parallel development without affecting the main codebase.
+
+	git checkout:
+		Switches between branches or restores files from different commits.
+
+	git merge:
+		Integrates changes from one branch into another.
+
+	git pull:
+		Fetches changes from a remote repository and merges them into the current branch.
+
+	git push:
+		Sends committed changes to a remote repository.
+
+	git clone:
+		Copies an existing repository from a remote source to a local machine.
+
+	git remote:
+		Manages connections to remote repositories (e.g., adding, renaming, removing).
+
+	git reset:
+		Resets the current branch to a specific commit, optionally preserving changes in the working directory or staging area.
+
+	git revert:
+		Undoes a previous commit by creating a new commit with the inverse changes.
+
+	git stash:
+		Temporarily stores changes that are not ready to be committed, allowing you to switch branches or apply changes later.
+
+	git tag:
+		Marks specific commits as important points (e.g., releases) with a descriptive tag.
+
+	git submodule:
+		Manages Git repositories as submodules within another Git repository.
+
+	git rebase:
+		Reapplies commits from one branch onto another, rewriting the commit history.
+
+	git cherry-pick:
+		Picks and applies a single commit from one branch to another.
+
+	git bisect:
+		Helps pinpoint where a bug was introduced by performing a binary search through the commit history.
+
+	git clean:
+		Removes untracked files from the working directory.
+
+	git rm:
+		Removes files from the working directory and stages the deletion.
+
+	git mv:
+		Moves or renames files and stages the changes.
+
+	git fetch:
+		Retrieves changes from a remote repository without merging them into the local branch.
+
+
+Git Functions:
+
+	1. Version Control
+		Tracking Changes: Git records changes to files over time, allowing you to revert to specific versions.
+		History: Keeps a detailed history of commits, making it easy to see who changed what and when.
+
+	2. Branching and Merging
+		Branching: Create branches to work on different features or fixes independently.
+		Merging: Combine changes from different branches into a single branch.
+
+	3. Collaboration
+		Distributed System: Multiple developers can work on the same project from different locations.
+		Remote Repositories: Push and pull changes to and from remote repositories to share work with others.
+
+	4. Staging Area
+		Staging: Add changes to a staging area before committing, allowing you to review and organize changes.
+
+	5. Commit and Log
+		Commits: Save snapshots of the project with messages describing the changes.
+		Log: View the commit history to track changes over time.
+
+	6. Diff and Patch
+		Diff: Compare differences between files, commits, or branches.
+		Patch: Apply changes from one branch to another.
+
+	7. Undo and Redo
+		Reset: Unstage changes or reset the repository to a previous commit.
+		Revert: Undo changes by creating new commits that reverse previous changes.
+
+	8. Tagging
+		Tags: Mark specific points in history as important (e.g., for releases).
+
+	9. Submodules
+		Submodules: Manage dependencies by including other Git repositories within a repository.
+
+	10. Configuration and Customization
+		Configuration: Customize Git behavior with configuration settings (e.g., user information, aliases).
+		Hooks: Automate tasks with scripts that run at specific points in the Git workflow.
