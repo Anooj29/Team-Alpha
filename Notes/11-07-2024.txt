@@ -1,0 +1,120 @@
+11-07-2024
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Git-version control system
+
+VCS - maintains different versions of your project when work is done in a team or as an individual
+
+Git is a distributed version control system, means every collaborator has a local repo of the project in to their local machine
+
+Repository: Keeps all your project files
+>> Working directory: Local directory where project files are present
+>> Staging area: Area where project is put before committing
+>> Local Repository: Local repo is where changes are committing before pushing to the central repository
+>> Central repository: Main project
+ 
+
+Commands
+
+1) git clone
+
+2) git status
+
+3) git add filenames (git add.)
+
+4) git commit -m <message>
+
+5) git push
+
+6) git help
+
+1) git config
+
+8) git init
+
+9) git log
+
+10) git add
+
+11) git diff
+
+12) git checkout-license 
+
+13) git branch <names
+
+14) git checkout <name>
+
+15) git merge <name>
+
+16) git brand-d <name>
+
+17) git checkout -b admin
+
+18) git branch -r
+
+19) git tag
+
+20) git fetch
+
+21) git stash
+
+22) git stash pop
+
+23) 94 -version
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+GitHub: web based platform that uses Git, a version control system
+ 
+Features:
+
+1) Version control: based on Git,
+
+2s Repository: repo is centres place where all the files for a stored project are stored.
+
+3) Branch: create a branch to work on a new feature once changes are ready, merge the branch back into main branch.
+
+4) Pull Request: requests project maintainers the review & merge your changes into the main codebases, this feature promotes collaborate
+
+5) Issues & project Management: provides tools to track bugs enhancement and other tasks. Offers project boards.
+
+6) Actions & Automation: allows you to automate workflow, running test, & deploy code. enhances productivity.
+
+>>Create a GitHub acc, Create a repository.
+
+>>To add existing repo to GitHub
+
+>>git init
+
+>>git add
+
+>>git commit 13 "First commit
+
+>>git remote add
+
+>>git push origin master
+
+>>git pull
+
+
+
+Difference GitHub and Git
+
+>>Git:
+
+1) distributed  version control System.
+
+2) tracks changes in project
+
+3) Works on CLI (Command Line Interface)
+
+4) works in local machine of developers by which you can commit Changes, create branches, merge code
+
+>>GitHub:
+
+1) web-based platform which helps git to hosts its repos.
+
+2) helps to tack issues pull request, code review & so on.
+
+3) web-based graphical interface.
+
+(4) remote hosting service by which other developers can access ca pull & fetch code acc to there need.
