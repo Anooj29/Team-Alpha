@@ -1,2 +1,32 @@
 DATE: 9/07/2024
 NOTES:
+Today we took overview of the course, we looked and visited the required websites and sources that we are going to use. Then we start our set up Windows PowerShell. 
+Now why only PowerShell? Because PowerShell provides most of the requirements and its very similar to LINUX, Linux functions like(ls, cd, --update, etc).
+
+STEP 1: 
+
+Install Chocolatey (choco); Chocolatey is software which manage automation. It is a package manager that, wraps installer, zips and scripts into compile packages.
+INSTALLATION COMMAND: 
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+After installation of choco we got choco 2.3.0
+
+
+STEP 2:
+
+Installation of python.
+From Windows Powershell we installed Python;  COMMAND: choco install Python 
+					we got Python 3.11.9
+why we are using Python 3.11 not 3.12?
+Because may time python gets upgraded and with that upgrade we need to upgrade our setup multiple times, to avoid multiple setups we are going with Pythons last version. 
+Here, we need to make sure the installed Python version is added in PATH so that it we be related to all the installed packages.
+there are two ways to add in PATH. i] While installation we get the option to add in PATH.
+				  ii] Need to copy the path of the Python i.e., the plac3e where it installed and then need to go to Environment Variable, then paste the copied path of Python in PATH variable.
+
+STEP 3: 
+
+What is IDE(Integrated Development Environment) and Text Editor?
+Difference between IDE and Text Editor.
+Advantages of IDE.
+Explain IDE like VS Code, PyCharm.
+Explain Text Editor Sublime Text 3.
