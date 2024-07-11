@@ -4,7 +4,7 @@ Git:
 
 	Git is a distributed version control system used to track changes in source code during software development. It allows multiple developers to work on a project simultaneously without interfering with each other's work.
 
-	Key Concepts:
+	Concepts:
 		Repository: A directory tracked by Git.
 		Commit: A snapshot of changes with a message.
 		Branch: A parallel version of the repository.
@@ -18,7 +18,7 @@ Github:
 
 	GitHub is a web-based platform that uses Git for version control and provides additional features to facilitate collaborative software development.
 
-	Key Concepts:
+	Concepts:
 		Repositories: Host and manage Git repositories.
 		Issues: Track bugs, enhancements, and other tasks.
 		Pull Requests: Propose, review, and merge changes.
@@ -40,7 +40,7 @@ Difference Between Git and Github:
 
 		Usage: Command-line tool used locally on a developer's machine.
 
-		Key Features:
+		Features:
 			Version control
 			Branching and merging
 			Commit history
@@ -54,7 +54,7 @@ Difference Between Git and Github:
 
 		Usage: Web interface and integrations for managing Git repositories online.
 
-		Key Features:
+		Features:
 			Repository hosting
 			Pull requests
 			Issue tracking
