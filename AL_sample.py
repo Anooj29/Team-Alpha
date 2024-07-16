@@ -1,6 +1,5 @@
 from manim import *
-from manim.utils.color.X11 import BLUE2
-from manim.utils.color.XKCD import DARKAQUA, DARKBLUE
+from manim.utils.color.XKCD import *
 
 class IntegrationIntro(Scene):
 
