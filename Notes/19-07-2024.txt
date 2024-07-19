@@ -1,0 +1,30 @@
+19-07-2024
+
+Understanding Classes and Objects:
+  >>Classes are blueprints or templates for creating objects. They define the properties (attributes) and behaviors (methods) that objects of that class will have. 
+
+  >>Objects are instances of classes. They are created from the class blueprint and have their own unique set of data (attributes). 
+
+Key Concepts
+>>Attributes: These are the characteristics or properties of an object. For example, a Car class might have attributes like color, make, model, and year.
+>>Methods: These are the actions or behaviors that an object can perform. A Car class might have methods like start(), stop(), and accelerate().
+>>Encapsulation: This principle involves bundling data (attributes) and methods that operate on that data within a single unit (the class). It helps in protecting data integrity and preventing accidental modification.
+>>Inheritance: This allows you to create new classes (subclasses) that inherit properties and methods from an existing class (superclass). This promotes code reusability and hierarchical relationships between classes.
+>>Polymorphism: This concept enables objects of different types to be treated as if they were of the same type. It allows for flexible and extensible code.
+
+Special Methods
+Special methods (also known as magic methods or dunder methods) in Python start and end with double underscores. They allow you to define the behavior of your objects for built-in operations.
+
+>>Common Special Methods
+__init__: Called when an object is instantiated.
+__str__: Called by the str() function and print statements to provide a string representation of the object.
+__repr__: Called by the repr() function for an official string representation of the object, useful for debugging.
+
+Abstract base classes (ABCs) and interfaces are tools in object-oriented programming that allow you to define a common API for a set of subclasses. They help ensure that certain methods are implemented by the derived classes, providing a way to enforce a contract for the class hierarchy.
+
+Abstract Base Classes (ABCs)
+Abstract base classes provide a way to define a common interface for a group of related classes. ABCs cannot be instantiated and are meant to be subclassed.
+In Python, the abc module is used to define abstract base classes. You use the ABC class and the abstractmethod decorator to define abstract methods.
+
+Interfaces
+In many programming languages, interfaces are used to define a contract that classes must follow. Python doesn't have a built-in interface keyword like some other languages (e.g., Java), but you can use abstract base classes to achieve similar functionality.
