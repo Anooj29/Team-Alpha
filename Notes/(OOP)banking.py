@@ -40,4 +40,4 @@ while True:
         print("Exiting program. Thank you!")
         break
     else:
-        print("Invalid choice. Please enter a valid option.\n")
+        print("Invalid choice. Please enter a valid option\n")

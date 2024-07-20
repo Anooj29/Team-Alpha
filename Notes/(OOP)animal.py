@@ -6,7 +6,7 @@ class Animal:
     def speak(self):
         raise NotImplementedError("Not there")
 
-# child classes
+# child class
 class Dog(Animal):
     def speak(self):
         return f"{self.name} says Woof!"

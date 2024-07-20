@@ -11,7 +11,6 @@ class Product:
         print(f"Price: ${self.price}")
         print(f"Quantity Available: {self.quantity}")
 
-
 class ShoppingCart:
     def __init__(self):
         self.items = []

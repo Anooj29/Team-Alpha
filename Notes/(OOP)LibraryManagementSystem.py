@@ -11,7 +11,6 @@ class Book:
         print(f"Author: {self.author}")
         print(f"Available Copies: {self.available_copies}")
 
-
 class Library:
     def __init__(self):
         self.books = []
