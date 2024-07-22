@@ -1,0 +1,147 @@
+Notes: 22-07-2024
+
+Lambda Functions:
+	
+	Lambda functions are small anonymous functions defined using the lambda keyword. They are used for creating small, one-time, and inline function objects.
+
+	Syntax:	
+		lambda arguments: expression
+
+	Example:
+		add = lambda x, y: x + y
+
+map(), filter(), and reduce():
+
+	map(): 
+		Applies a function to all items in an iterable.
+
+		Syntax:
+			map(function, iterable)
+
+		Example:
+			list(map(lambda x: x**2, [1, 2, 3]))
+
+	filter():
+		Filters elements in an iterable based on a function.
+
+		Syntax:
+			filter(function, iterable)
+
+		Example:
+			list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4]))
+
+	reduce():
+			Applies a rolling computation to sequential pairs in an iterable.
+
+		Syntax: 
+			functools.reduce(function, iterable[, initializer])
+
+		Example: 
+			reduce(lambda x, y: x * y, [1, 2, 3, 4])
+
+Iterators and Generators:
+	
+	Iterators:
+
+		An iterator is an object that contains a countable number of values and can be iterated upon. It implements two methods: __iter__() and __next__().
+
+		Example:
+			class MyIterator:
+			    def __init__(self, limit):
+			        self.limit = limit
+			        self.counter = 0
+
+			    def __iter__(self):
+			        return self
+
+			    def __next__(self):
+			        if self.counter < self.limit:
+			            self.counter += 1
+			            return self.counter
+			        else:
+			            raise StopIteration
+
+			my_iter = MyIterator(5)
+			for num in my_iter:
+			    print(num)  
+
+
+	Generators:
+
+		Generators are a simpler way to create iterators using a function and the yield statement.
+
+		Example:
+			def my_generator(limit):
+			    counter = 0
+			    while counter < limit:
+			        counter += 1
+			        yield counter
+
+			for num in my_generator(5):
+			    print(num)
+
+
+Advanced Functional Programming with functools and itertools:
+
+	1] functools Module:
+
+		a] functools.partial: Allows partial application of a function.
+
+		Example:
+			from functools import partial
+			def power(base, exponent):
+			    return base ** exponent
+
+			square = partial(power, exponent=2)
+			print(square(3))
+
+		b] functools.lru_cache: Decorator to cache results of function calls.
+
+		Example:
+			from functools import lru_cache
+
+			@lru_cache(maxsize=32)
+			def fibonacci(n):
+			    if n < 2:
+			        return n
+			    return fibonacci(n-1) + fibonacci(n-2)
+
+			print(fibonacci(10)) 
+
+	2] itertools Module:
+
+		a] itertools.chain: Combine multiple iterables into one.
+
+		Example:
+
+			from itertools import chain
+			combined = chain([1, 2, 3], [4, 5, 6])
+			print(list(combined)) 
+
+		b] itertools.islice: Slice an iterable.
+
+		Example:
+
+			from itertools import islice
+			iterable = range(10)
+			sliced = islice(iterable, 2, 8, 2)
+			print(list(sliced))  
+
+		c] itertools.cycle: Cycle through an iterable indefinitely.
+
+		Example:
+
+			from itertools import cycle
+			cyclic = cycle([1, 2, 3])
+			for i in range(6):
+			    print(next(cyclic))
+
+
+		d] itertools.permutations: Generate all possible permutations.
+
+		Example:
+
+			from itertools import permutations
+			perms = permutations([1, 2, 3])
+			for perm in perms:
+			    print(perm)
