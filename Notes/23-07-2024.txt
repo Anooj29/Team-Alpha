@@ -1,0 +1,47 @@
+23-07-2024
+
+Functional Programming in Python: Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state or mutable data. Python supports functional programming through various constructs, such as first-class functions, higher-order functions, and the use of pure functions.
+
+
+Functional Programming Constructs in Python:
+
+1) Lambda Functions: Lambda functions in Python are small anonymous functions defined using   the lambda keyword. They can have any number of arguments but only one expression.
+ Syntax: >>lambda arguments: expression
+
+2) Map Function: The map function applies a given function to all items in an iterable (like a list) and returns a map object (which is an iterator).
+ Syntax: >>map(function, iterable, ...)
+
+3) Filter Function: The filter function constructs an iterator from elements of an iterable for which a function returns true.
+ Syntax: >>filter(function, iterable)
+
+4) Reduce Function:The reduce function from the functools module applies a rolling computation to sequential pairs of values in a list. It is useful for performing cumulative or aggregation operations.
+ Syntax: from functools import reduce
+         reduce(function, iterable[, initializer])
+
+Iterators and Generators
+
+1) Iterators: An iterator is an object representing a stream of data; it returns data one element at a time. Python's iterator protocol requires the implementation of two methods: __iter__() and __next__().
+>>__iter__(): Returns the iterator object itself.
+>>__next__(): Returns the next item in the sequence. Raises a StopIteration exception when there are no more items.
+
+2) Genrators: Generators are a simple and powerful tool for creating iterators. They allow you to declare a function that behaves like an iterator. Generators are written using the yield statement instead of return. Unlike regular functions, generators remember their state between calls.
+
+Advance Functional Programming using Modules like functools and itertools:
+ 
+1) functools module: The functools module in Python provides higher-order functions that act on or return other functions. It's useful for tasks like function composition, memoization, and working with callable objects.
+
+Common functions in functools are: >>functools.reduce() - Applies a rolling computation to sequential pairs of values in a list.
+                                   >>functools.partial() - Creates a new function with some arguments of the original function fixed.
+                                   >>functools.lru_cache() - Decorator that provides a least-recently-used (LRU) cache to a function, which can significantly speed up repeated function calls with the same arguments.
+                                   >>functools.wraps() - A decorator to update the wrapper function to look more like the wrapped function by copying attributes such as the docstring, module, and name.
+                                   
+
+2)itertools module: The itertools module provides a collection of tools for handling iterators. These functions return iterators and can be used to create complex iteration-based algorithms.
+
+Common functions in itertools are: >>itertools.chain() - Takes several iterators and returns a single iterator that produces values from the first iterator until it is exhausted, then continues to the next iterator, and so on.
+                                   >>itertools.cycle() - Returns an iterator that cycles through the elements of the input iterable indefinitely.
+                                   >>itertools.count() - Returns an iterator that generates consecutive integers, starting from a specified value.
+                                   >>itertools.groupby() - Groups consecutive elements in an iterable that have the same key value.
+                                   >>itertools.islice() - Slices an iterator.
+                                   >>itertools.permutations() - Returns all possible permutations of the elements in the input iterable.
+                                   >>itertools.combinations() - Returns all possible combinations of the elements in the input iterable of a specified length.

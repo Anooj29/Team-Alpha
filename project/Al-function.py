@@ -44,11 +44,11 @@ class Function(Scene):
         self.play(FadeIn(intro_text2))
         self.wait(2)
 
-        func = MathTex("f(x) = x^2")
+        func = MathTex("f(x) = x^3")
         func.next_to(intro_text2, DOWN,buff=1)
         self.play(Write(func))
 
-        tangent_line = MathTex("f'(x) = 2x")
+        tangent_line = MathTex("f'(x) = 3x^2")
         tangent_line.next_to(func, DOWN, buff=1.5 )
         self.play(Write(tangent_line))
 
@@ -94,8 +94,8 @@ class Function(Scene):
         )
         
         graph_labels = graph1.get_axis_labels(x_label="x", y_label="f(x)")
-        parabola = graph1.plot(lambda x: x**2, color=green)
-        parabola_label = graph1.get_graph_label(parabola, label="x^2")
+        parabola = graph1.plot(lambda x: x**3, color=green)
+        parabola_label = graph1.get_graph_label(parabola, label="x^3")
         self.play(Create(plane))
         self.play(Create(graph1), Write(graph_labels))
         self.play(Create(parabola), Write(parabola_label))
@@ -111,7 +111,7 @@ class Function(Scene):
 
         def update_slope(dot):
             x = x_tracker.get_value()
-            y = x**2
+            y = x**3
             dot.move_to(graph1.c2p(x,y))
 
         tangent_line = always_redraw(
@@ -138,14 +138,14 @@ class Function(Scene):
             y_range=[-1, 9],
             axis_config={"color": red})
         graph_labels2 = graph2.get_axis_labels(x_label="x", y_label="f'(x)")
-        derivative = graph2.plot(lambda x:2*x, color=green)
-        derivative_label = graph2.get_graph_label(derivative, label="2x")
+        derivative = graph2.plot(lambda x:3*(x**2), color=green)
+        derivative_label = graph2.get_graph_label(derivative, label="3x^2")
         xx_tracker = ValueTracker(-3)
         dot_3 = Dot(color=lgreen).move_to(graph2.coords_to_point(0,0))
 
         def update_dot(dot):
             x = xx_tracker.get_value()
-            y = 2*x
+            y = 3*(x**2)
             dot.move_to(graph2.c2p(x, y))
 
 
