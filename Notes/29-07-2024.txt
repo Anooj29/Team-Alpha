@@ -1,0 +1,176 @@
+29-07-2024
+
+Mastering NumPy:
+>>NumPy is a Python library used for working with arrays.
+>>It also has functions for working in domain of linear algebra, fourier transform, and matrices.
+>>NumPy stands for Numerical Python.
+>>NumPy aims to provide an array object that is up to 50x faster than traditional Python lists.
+>>The array object in NumPy is called ndarray, it provides a lot of supporting functions that make working with ndarray very easy.
+
+Array Operations:
+1) Creating an array:
+import numpy as np
+# Create a 1D array
+arr1 = np.array([1, 2, 3, 4, 5])
+
+# Create a 2D array
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Create an array of zeros
+zeros = np.zeros((3, 3))
+
+# Create an array of ones
+ones = np.ones((2, 4))
+
+# Create an array with a range of values
+arr_range = np.arange(10, 20, 2)
+
+2) Array Attributes:
+print(arr2.shape)  # Shape of the array
+print(arr2.size)   # Number of elements in the array
+print(arr2.dtype)  # DAta type of the array elements
+
+3) Indexing and Slicing:
+# Access a specific element
+element = arr2[1, 2]  # Access the element at 2nd row, 3rd column
+
+# Slice the array to get a subarray
+subarray = arr2[0:2, 1:3]  # Slices the array from 1st to 2nd row and 2nd to 3rd column
+
+4)Array Operations:
+# Element-wise operations
+arr_sum = arr1 + 2       # Add 2 to each element
+arr_product = arr1 * 3   # Multiply each element by 3
+
+# Element-wise array addition
+arr_add = arr1 + np.array([5, 4, 3, 2, 1])
+
+# Matrix multiplication
+arr_dot = np.dot(arr2, arr2.T)  # Dot product of arr2 and its transpose
+
+5) Statistical Operations:
+mean = np.mean(arr1)    # Mean of the array
+sum_value = np.sum(arr1) # Sum of all elements
+min_value = np.min(arr1) # Minimum value in the array
+max_value = np.max(arr1) # Maximum value in the array
+
+6)Reshaping Arrays:
+reshaped_array = arr1.reshape(5, 1)  # Reshape 1D array to 2D array with 5 rows and 1 column
+
+7)Broadcasting:
+arr3 = np.array([1, 2, 3])
+arr4 = np.array([[10], [20], [30]])
+
+broadcasted_sum = arr3 + arr4  # Automatically broadcasts arr3 to match arr4's shape
+
+Techniques for indexing, slicing, and reshaping arrays:
+1) Indexing:
+            a) Integer Indexing: Can access elements of an array using their indices.
+>>import numpy as np
+arr = np.array([10, 20, 30, 40, 50])
+# Accessing elements
+print(arr[0])  # Output: 10
+print(arr[3])  # Output: 40
+
+            b) Boolean Indexing: Allows us to select elements of an array based on conditions.
+>>arr = np.array([10, 20, 30, 40, 50])
+# Accessing elements greater than 25
+print(arr[arr > 25])  # Output: [30 40 50]
+
+2) Slicing:
+Slicing allows you to extract a subarray from an array. The syntax for slicing is array[start:stop:step], where:
+start is the index to begin the slice (inclusive),
+stop is the index to end the slice (exclusive),
+step is the step size between elements.
+
+>>arr = np.array([10, 20, 30, 40, 50])
+# Slicing from index 1 to 3
+print(arr[1:4])  # Output: [20 30 40]
+# Slicing with a step of 2
+print(arr[::2])  # Output: [10 30 50]
+>>arr2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+# Slicing rows 1 to 2 and columns 0 to 1
+print(arr2d[1:3, 0:2])  
+# Output:
+# [[4 5]
+#  [7 8]]
+# Slicing all rows and columns from index 1 onwards
+print(arr2d[:, 1:])  
+# Output:
+# [[2 3]
+#  [5 6]
+#  [8 9]]
+
+3) Reshaping: 
+Reshaping allows you to change the shape of an array without altering its data. The reshape() function is commonly used for this purpose.
+>>arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+# Reshape 1D array to 3x3 2D array
+arr2d = arr.reshape(3, 3)
+print(arr2d)
+# Output:
+# [[1 2 3]
+#  [4 5 6]
+#  [7 8 9]]
+# Reshape 2D array to 1D array
+arr1d = arr2d.reshape(-1)  # -1 tells NumPy to calculate the dimension automatically
+print(arr1d)  # Output: [1 2 3 4 5 6 7 8 9]
+
+Concepts of broadcasting and vectorization in NumPy:
+
+1) BroadCasting: 
+It refers to NumPy's ability to perform element-wise operations on arrays of different shapes.
+>>If the arrays do not have the same rank (i.e., number of dimensions), NumPy will prepend the shape of the smaller array with ones until both shapes have the same rank.
+>>NumPy then compares the shapes element-wise, starting from the last dimension. Two dimensions are compatible if:
+a. They are equal, or
+b. One of them is 1.
+>>If the dimensions are compatible, NumPy "stretches" the array along the dimension with size 1 to match the size of the other array. 
+ 
+
+2) Vectorization:
+Vectorization is the process of converting operations that would typically be executed in a loop into array operations. By leveraging NumPy's ability to perform element-wise operations on entire arrays, vectorization allows you to write more concise and efficient code.
+
+>># Without vectorization (using a loop)
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([10, 20, 30, 40, 50])
+result = np.zeros(5)
+for i in range(len(arr1)):
+    result[i] = arr1[i] + arr2[i]
+print(result)  # Output: [11. 22. 33. 44. 55.]
+
+
+Advanced multidimensional array operations:
+1) Transposing and Swapping Axes:
+Transposition is the process of swapping the axes of an array, effectively flipping its dimensions. This is especially useful when working with matrices and higher-dimensional data.
+>>transpose() Method:
+The transpose() method allows you to reverse or permute the axes of an array
+>>swapaxes() Method:
+The swapaxes() method allows you to swap any two axes of an array
+
+2)Reshaping and Flattening Arrays:
+Reshaping involves changing the shape of an array while maintaining its data. Flattening is a special case of reshaping where a multi-dimensional array is converted into a 1D array.
+>>reshape() Method:
+The reshape() method is used to change the shape of an array
+>>Flattening Arrays:
+The flatten() method or ravel() can be used to flatten an array.
+ravel() returns a flattened array view if possible (no new data is created), making it more memory efficient and flatten() returns a copy of the array
+
+3)Concatenation and splitting of arrays:
+Concatenation refers to joining two or more arrays along a specified axis, while splitting divides an array into multiple sub-arrays.
+>>concatenate() Method:
+You can use concatenate() to join arrays along an existing axis
+>>stack() and hstack() / vstack() Methods:
+stack() joins arrays along a new axis.
+hstack() joins arrays horizontally (along columns).
+vstack() joins arrays vertically (along rows).
+>>split() Method:
+The split() function is used to split an array into multiple sub-arrays
+
+4) Applying Functions along Axes: 
+NumPy allows you to apply functions along a specified axis of an array. This is useful for performing operations like summing, averaging, or finding the maximum along a specific axis.
+>>apply_along_axis() Method:
+This method allows you to apply a function along a specific axis
+>>sum(), mean(), max(), etc.:
+Common functions like sum(), mean(), and max() can be applied along axes
+
+5) Broadcasting with Multidimensional Arrays:
+Broadcasting rules allow you to perform operations on arrays with different shapes, as discussed previously. This becomes especially powerful with multidimensional arrays.

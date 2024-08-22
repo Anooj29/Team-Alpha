@@ -1,0 +1,215 @@
+3-08-2024
+
+NumPy short for Numerical Python, is a fundamental package for scientific computing in Python. It provides high-performance multidimensional array objects and tools for working with these arrays. NumPy is the cornerstone of many other scientific Python libraries like SciPy, Pandas, and Matplotlib.
+
+The core data structure in NumPy is the ndarray (n-dimensional array). It's a grid of values, all of the same type, and indexed by a tuple of non-negative integers.
+
+Basic Array operations: 
+1) Declaration: 
+>> arr = numpy.array([1,2,3,4,5,6,7,8])
+2) Accessing element:
+>> print(arr[2])
+>> print(arr[:,1])
+3) Operations:
+>>arr5 = arr1 + 2  
+>>arr6 = arr1 * arr2
+>>arr7 = arr1 > 3  
+>>arr8 = numpy.sqrt(arr1) 
+>>print(np.sum(arr1))
+>>print(np.mean(arr1))
+>>print(np.std(arr1))
+
+
+Indexing, slicing and reshaping:
+>>Basic Indexing:
+Similar to Python lists, indexing starts at 0.
+For multidimensional arrays, use commas to separate indices for each dimension.
+Python
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+print(arr[2])  
+arr2d = np.array([[1, 2, 3], [4, 5, 6]])
+print(arr2d[1, 0]) 
+Negative Indexing:
+Access elements from the end of the array.
+Python
+print(arr[-1])
+
+>>Slicing: Slicing extracts a portion of an array.
+Basic Slicing:
+Use the colon (:) operator to specify a range.
+Syntax: array[start:end:step]
+Python
+print(arr[1:4])  print(arr[::2])  
+Use code with caution.
+
+Multidimensional Slicing:
+Use multiple colons for each dimension.
+Python
+print(arr2d[:, 1]) 
+print(arr2d[1, :2]) 
+
+>>Reshaping: Reshaping changes the shape of an array without altering its data.
+
+Reshape:
+Use the reshape method to specify the new shape.
+Python
+arr = np.arange(12)
+print(arr.reshape(3, 4))
+Use code with caution.
+
+Other Reshaping Functions:
+ravel: Flattens the array into a 1D array.
+resize: Changes the shape of an array in-place.
+Python
+print(arr.ravel())
+arr.resize(2, 6)
+print(arr)
+
+
+Concepts of broadcasting and vectorization in NumPy
+
+1)Broadcasting
+Broadcasting is NumPy's ability to perform operations on arrays of different shapes. The smaller array is stretched or repeated to match the shape of the larger array, allowing element-wise operations without explicit loops. 
+
+Key Rules:
+Arrays must be compatible in shape.   
+Trailing dimensions must be compatible.   
+Arrays with fewer dimensions are prepended with dimensions of size 1.
+>>
+import numpy as np
+
+a = np.array([1, 2, 3])  
+b = np.array([4])        
+
+c = a + b  
+print(c) 
+
+2)Vectorization
+Vectorization is the process of performing operations on entire arrays without explicit loops. NumPy leverages broadcasting and optimized C routines to achieve this.  
+
+Benefits:
+Significantly faster than Python loops.   
+More concise and readable code.
+Takes advantage of NumPy's optimized operations. 
+
+>>import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+
+squares = a**2
+print(squares)  
+
+Key Points:
+>>Broadcasting is a mechanism to make arrays compatible for operations.   
+>>Vectorization is the process of performing operations on entire arrays without explicit loops.   
+>>Broadcasting often enables vectorization.   
+>>Vectorization significantly improves performance compared to Python loops.
+ 
+
+Advanced multidimensional array operations
+
+1) Indexing and Slicing: 
+Advanced Indexing:
+Integer array indexing: Use arrays of integers to index elements.
+Boolean indexing: Select elements based on conditions.
+Fancy indexing: Combine integer and boolean indexing for complex selections.
+Slicing with Ellipsis:
+Use ... to represent any number of colons.
+
+>>
+import numpy as np
+
+arr = np.arange(24).reshape(2, 3, 4)
+
+# Integer array indexing
+print(arr[[0, 1], [1, 2], [2, 3]])
+
+# Boolean indexing
+print(arr[arr > 10])
+
+# Fancy indexing
+print(arr[[0, 1], [1, 0]])
+
+# Slicing with ellipsis
+print(arr[..., 2])
+
+
+
+2)Reshaping and Transposing:
+Reshaping: Change the shape of an array without altering data.
+Transposing: Swap rows and columns.
+Swap axes: Interchange two axes of an array.
+
+>>
+arr = np.arange(24).reshape(2, 3, 4)
+
+# Reshaping
+print(arr.reshape(4, 3, 2))
+
+# Transposing
+print(arr.T)
+
+# Swapaxes
+print(np.swapaxes(arr, 0, 2))
+
+3)Mathematical Operations
+Matrix Operations:
+Dot product, matrix multiplication, inverse, determinant.
+Linear algebra functions in numpy.linalg.
+Element-wise Operations:
+Arithmetic, comparison, logical operations.
+Universal functions (ufuncs) for efficient operations.
+Reduce Operations:
+Sum, mean, min, max, etc. along specific axes.
+Python
+
+>>
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+# Matrix multiplication
+print(np.dot(A, B))
+
+# Element-wise multiplication
+print(A * B)
+
+# Sum along rows
+print(A.sum(axis=1))
+Use code with caution.
+
+4)Array Manipulation
+Concatenation: Combine arrays along specified axes.
+Splitting: Divide an array into smaller arrays.
+Stacking: Combine arrays along a new axis.
+Python
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+# Concatenation
+print(np.concatenate([a, b]))
+
+# Splitting
+print(np.split(a, 2))
+
+# Stacking
+print(np.stack([a, b], axis=1))
+Use code with caution.
+
+5)Advanced Indexing and Slicing
+Indexing with tuples: Access elements using tuples of indices.
+Advanced slicing: Use strides for complex slicing patterns.
+Python
+arr = np.arange(24).reshape(2, 3, 4)
+
+# Indexing with tuples
+print(arr[(0, 1), (1, 2), (2, 3)])
+
+# Advanced slicing
+print(arr[::2, :, 1])
+
+
+
+
+
+
