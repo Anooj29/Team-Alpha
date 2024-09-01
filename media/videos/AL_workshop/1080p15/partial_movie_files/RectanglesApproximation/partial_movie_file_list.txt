@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_workshop/1080p15/partial_movie_files/RectanglesApproximation/2214604948_810620820_223132457.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_workshop/1080p15/partial_movie_files/RectanglesApproximation/2224013992_2475379470_3251852748.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_workshop/1080p15/partial_movie_files/RectanglesApproximation/2224013992_2309883753_3974795834.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_workshop/1080p15/partial_movie_files/RectanglesApproximation/2224013992_179268758_1746206926.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_workshop/1080p15/partial_movie_files/RectanglesApproximation/2224013992_3890345977_2878250617.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_workshop/1080p15/partial_movie_files/RectanglesApproximation/2224013992_1802821630_1314656093.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_workshop/1080p15/partial_movie_files/RectanglesApproximation/2224013992_3890345977_3501621579.mp4'

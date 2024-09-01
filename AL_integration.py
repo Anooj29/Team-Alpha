@@ -2,10 +2,10 @@ from manim import *
 
 class IntegrationIntro(Scene):
 
-	# config.pixel_height = 1080 
-	# config.pixel_width = 1920
-	# config.frame_height = 18
-	# config.frame_width = 32
+	config.pixel_height = 1080 
+	config.pixel_width = 1920
+	config.frame_height = 18
+	config.frame_width = 32
 
 
 	def construct(self):
@@ -56,7 +56,7 @@ class IntegrationIntro(Scene):
 		rects_list = []
 
 		for i in range(1,4):
-			num_rects = 6 ** i
+			num_rects = 4 ** i
 			rectangles = makeRect(num_rects)
 			rects_list.append(rectangles)
 

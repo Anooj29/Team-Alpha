@@ -1,0 +1,50 @@
+Notes:
+
+
+
+Installing Manim with Chocolatey:
+
+	Install Chocolatey:
+
+		Open Command Prompt as an administrator.
+		Run the command to install Chocolatey obtained from Chocolatey official site
+
+	To install manim:
+
+		Use the Command Prompt and run the command
+			choco install manimce
+
+		this will install ManimCE (which includes Python, Manim, and FFmpeg):
+
+	Verify Installation:
+
+		Check the versions to ensure everything is installed correctly
+			manim --version
+			ffmpeg -version
+			python --version
+
+Structural Overview of a Manim Script:
+
+	Basic Structure:
+		Import Manim classes: from manim import *.
+		Define a class for each scene, inheriting from Scene (e.g., class MyScene(Scene):).
+		Implement the construct() method to define the animation.
+
+	Scene Lifecycle:
+		Setup: Initialize objects.
+		Animation: Add methods like self.play(), self.wait().
+		Cleanup: Final adjustments and end scene.
+
+Crafting Basic Scenes and Animations:
+
+	Creating Objects:
+		Shapes and Text: Use classes like Circle(), Square(), Text().
+		Positioning: Use methods like move_to(), shift(), rotate().
+
+	Animating Objects:
+		Basic Animations: self.play(Create(obj)), self.play(FadeIn(obj)), self.play(Write(text)).
+		Transformations: Transform(obj1, obj2), ApplyMethod(obj.method).
+		
+	Rendering:
+		Render a scene: Run the script with manim script_name.py SceneClassName.
+		Output options: Configure output video resolution and quality (e.g., -pqh for high-quality preview).

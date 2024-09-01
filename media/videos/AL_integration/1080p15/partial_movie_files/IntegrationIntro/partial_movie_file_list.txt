@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_integration/1080p15/partial_movie_files/IntegrationIntro/2214604948_984040289_223132457.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_integration/1080p15/partial_movie_files/IntegrationIntro/2224013992_2475379470_4146197911.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_integration/1080p15/partial_movie_files/IntegrationIntro/2224013992_1575796699_1805611759.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_integration/1080p15/partial_movie_files/IntegrationIntro/2224013992_4286960809_1821913103.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_integration/1080p15/partial_movie_files/IntegrationIntro/2224013992_3890345977_1687779545.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_integration/1080p15/partial_movie_files/IntegrationIntro/2224013992_2858751379_1170148643.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/AL_integration/1080p15/partial_movie_files/IntegrationIntro/2224013992_3890345977_1404379676.mp4'

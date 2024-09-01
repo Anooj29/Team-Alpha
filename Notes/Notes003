@@ -1,0 +1,72 @@
+DATE:
+
+VGroup and other grouping method:
+
+	Groups multiple objects into a single entity for collective manipulation.
+
+	syntax:
+		group = VGroup(object1, object2, ...)
+
+	Example:
+		from manim import *
+
+		class GroupExample(Scene):
+		    def construct(self):
+		        circle = Circle()
+		        square = Square()
+		        group = VGroup(circle, square)
+		        self.play(Create(group))
+		        self.play(group.shift, 2*RIGHT)
+
+	there exist other similar grouping method having same syntax but VGroup is more versatile 
+
+
+Custom Animation Techniques:
+	
+	Create custom animations by subclassing Animation.
+
+	Example:
+
+		from manim import *
+
+		class CustomAnimation(Animation):
+		    def __init__(self, mobject, **kwargs):
+		        super().__init__(mobject, **kwargs)
+		    def interpolate_mobject(self, alpha):
+		        self.mobject.set_opacity(alpha)
+
+		class CustomAnimationExample(Scene):
+		    def construct(self):
+		        circle = Circle()
+		        self.play(CustomAnimation(circle))
+
+Use of Updaters:
+	
+	Continuously update properties of an object during animations.
+
+	Syntax : object.add_updater(updater_function)
+
+	Example:
+		from manim import *
+
+		class UpdaterExample(Scene):
+		    def construct(self):
+		        circle = Circle()
+		        circle.add_updater(lambda m: m.shift(0.1*RIGHT))
+		        self.add(circle)
+		        self.play(Rotate(circle, 2*PI, run_time=5))
+
+Incorporation of User Input and Interactivity in Animations:
+
+	User Input:
+
+		Not Directly Supported: Manim does not support real-time user input during animations.
+		Alternative: Use pre-defined parameters or generate animations based on script inputs.
+
+	Interactivity:
+
+		Jupyter Notebooks: Use %matplotlib notebook for interactive visualizations.
+		Interactive Tools: Use external libraries like mpld3 or plotly for interactive features (though not natively supported in Manim).
+		
+		Example: For interactivity, rely on pre-rendered animations with adjustable parameters.
+

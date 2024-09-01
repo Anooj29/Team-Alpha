@@ -1,0 +1,72 @@
+DATE: 26-07-2024
+
+Plotting with Matplotlib:
+	
+	Matplotlib is popular Python library for creating static, animated, and interactive visualizations.
+
+	How to use:
+		Use matplotlib.pyplot module.
+		Common function: plt.plot() for line plots.
+		Display plot: plt.show().
+
+	example:
+		import matplotlib.pyplot as plt
+
+		x = [1, 2, 3, 4, 5]
+		y = [2, 3, 5, 7, 11]
+
+		plt.plot(x, y)
+
+		plt.title('Simple Line Plot')
+		plt.xlabel('X-axis')
+		plt.ylabel('Y-axis')
+
+		plt.show()
+
+
+Techniques for Customizing Plots:
+	
+	Titles and Labels:
+
+		Title: plt.title('Title').
+		Axis Labels: plt.xlabel('X-axis label'), plt.ylabel('Y-axis label').
+
+	Legends:
+
+		Add legends: plt.legend(['label1', 'label2']).
+		Customize legend location: plt.legend(loc='upper left').
+
+	Styles and Colors:
+
+		Line styles: '-', '--', '-.', ':'.
+		Colors: 'r' (red), 'g' (green), 'b' (blue), etc.
+		Markers: '.' (point), 'o' (circle), 's' (square), etc.
+
+
+Creation of Subplots and Advanced Plotting Techniques:
+
+	Subplots:
+
+		Create multiple plots in one figure: plt.subplot(rows, cols, index).
+		Example: plt.subplot(2, 2, 1) creates a 2x2 grid of plots and activates the first plot.
+
+	Advanced Plotting:
+
+		Scatter plots: plt.scatter(x, y).
+		Bar charts: plt.bar(x, height).
+		Histograms: plt.hist(data, bins).
+		Pie charts: plt.pie(sizes, labels).
+
+
+Development of Interactive Plots:
+
+	Interactive Plotting:
+
+		plt.ion(): Enable interactive mode.
+		Widgets and sliders: Use libraries like matplotlib.widgets for interactive controls.
+		Updating plots: Functions like plt.pause() and plt.draw().
+
+	Interactivity with External Libraries:
+
+		Integration with Jupyter Notebook: %matplotlib notebook or %matplotlib inline for interactive plotting.
+		Use tools like mpld3 or plotly for enhanced interactivity.

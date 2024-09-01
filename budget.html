@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+</head>
+<body>
+    <h1>Budget Tracker</h1>
+    <input type="number" id="amount" placeholder="Amount">
+    <input type="text" id="category" placeholder="Category">
+    <button onclick="addExpense()">Add Expense</button>
+    <h2>Total Expenses</h2>
+    <p id="total"></p>
+    <h2>Expenses by Category</h2>
+    <ul id="category-list"></ul>
+
+    <script>
+        const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
+
+        function updateDisplay() {
+            const total = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+            
+            const categoryMap = expenses.reduce((map, expense) => {
+                map[expense.category] = (map[expense.category] || 0) + expense.amount;
+                return map;
+            }, {});
+            
+            const categoryList = document.getElementById('category-list');
+            categoryList.innerHTML = '';
+            for (const [category, amount] of Object.entries(categoryMap)) {
+                const li = document.createElement('li');
+                li.textContent = `${category}: $${amount.toFixed(2)}`;
+                categoryList.appendChild(li);
+            }
+        }
+
+        function addExpense() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const category = document.getElementById('category').value.trim();
+            
+            if (!isNaN(amount) && category) {
+                expenses.push({ amount, category });
+                localStorage.setItem('expenses', JSON.stringify(expenses));
+                updateDisplay();
+                document.getElementById('amount').value = '';
+                document.getElementById('category').value = '';
+            } else {
+                alert('Please enter a valid amount and category.');
+            }
+        }
+
+        updateDisplay();
+    </script>
+</body>
+</html>

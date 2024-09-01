@@ -1,0 +1,105 @@
+DATE:
+
+
+Simple Shapes and Animations (Manim):
+	
+	Creating Simple Shapes:
+
+		Circle: Circle()
+		Square: Square()
+		Rectangle: Rectangle()
+		Triangle: Triangle()
+
+		Example:
+			from manim import *
+
+			class BasicShapes(Scene):
+			    def construct(self):
+			        circle = Circle()
+			        square = Square()
+			        self.play(Create(circle), Create(square))
+
+	Basic Animations:
+
+		Create: Create(object) — Draws the shape.
+		FadeIn: FadeIn(object) — Fades the shape in.
+		Transform: Transform(object1, object2) — Transforms one shape to another.
+
+		Example:
+			from manim import *
+
+			class SimpleAnimation(Scene):
+			    def construct(self):
+			        circle = Circle()
+			        square = Square()
+			        self.play(Create(circle))
+			        self.play(Transform(circle, square))
+			        self.play(FadeOut(square))
+
+
+Strategies for Transformations and Animations:
+
+	Transformations:
+
+		MoveTo: object.move_to(position) — Moves the object.
+		Rotate: object.rotate(angle) — Rotates the object.
+		Scale: object.scale(factor) — Scales the object.
+
+		Example:
+
+		from manim import *
+
+		class Transformations(Scene):
+		    def construct(self):
+		        shape = Square()
+		        self.play(Create(shape))  
+		        self.play(shape.shift, 2*RIGHT)  
+		        self.play(shape.rotate, PI/4)  
+		        self.play(shape.scale, 2)  
+
+
+	Animation Sequences:
+
+		Sequential: self.play(Create(shape), Transform(shape, new_shape))
+		Parallel: self.play(Animation1(), Animation2())
+
+		Example:
+			from manim import *
+
+			class AnimationSequences(Scene):
+			    def construct(self):
+			        shape = Circle()
+			        new_shape = Square()
+			        self.play(Create(shape))  
+			        self.play(Transform(shape, new_shape)) 
+			        self.play(FadeOut(new_shape))  
+
+
+Methods for Incorporating Text and Mathematical Equations:
+	
+	Text:
+
+		Text: Text("Your Text") — Adds text.
+		Example: text = Text("Hello, World!"); self.play(Write(text))
+
+		Example:
+		from manim import *
+
+		class TextExample(Scene):
+		    def construct(self):
+		        text = Text("Hello, Manim!") 
+		        self.play(Write(text)) 
+
+
+	Mathematical Equations:
+
+		MathTex: MathTex("E = mc^2") — Displays math equations.
+		Example: math_eq = MathTex("E = mc^2"); self.play(Write(math_eq))
+
+		Example:
+			from manim import *
+
+			class TextAndMath(Scene):
+			    def construct(self):
+					math_eq = MathTex("E = mc^2")
+					self.play(Write(math_eq))

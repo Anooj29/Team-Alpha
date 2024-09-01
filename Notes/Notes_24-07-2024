@@ -1,0 +1,83 @@
+DATE: 24-07-2024
+
+NumPy:
+		Fundamental library for numerical computations in Python.
+		Supports large, multi-dimensional arrays and various mathematical operations.
+
+Basic Operations:
+
+	Creating Arrays: np.array(), np.zeros(), np.ones(), etc.
+
+	Attributes: shape, size, dtype, ndim.
+
+	Operations: Element-wise (addition, subtraction) and aggregate functions (np.sum(), np.mean()).
+
+Indexing, Slicing and Reshaping:
+
+	Indexing: Access elements using indices, boolean, or fancy indexing.
+
+	Slicing: Extract subarrays using [start:stop:step] for 1D array and [star_row:end_row:step, start_col:end_col:step] for 2D array
+
+	Reshaping: Change array shape with reshape(), flatten(), transpose() or .T
+
+Broadcasting:
+
+	Broadcasting allows NumPy to work with arrays of different shapes when performing arithmetic operations
+	The smaller array is "broadcast" to match the shape of the larger array.
+
+	example:
+
+		import numpy as np
+
+		matrix = np.array([[1, 2],
+               			  [3, 4]])
+
+		scalar = 5
+
+		result = matrix + scalar
+
+		#here the scalar is broadcasted into a 2 by 2 matrix as [[5,5],[5,5]] and is added with matrix
+
+		result = [[6,7],[8,9]]
+
+Vectorization:
+
+	Vectorization is the process of performing operations on entire arrays instead of using explicit loops. 
+	It leverages NumPy's efficient, C-based operations to perform calculations much faster than traditional Python loops.
+
+	example:
+		import numpy as np
+
+		array = np.array([1, 2, 3, 4])
+
+		squared = np.zeros_like(array)
+		for i in range(len(array)):
+		    squared[i] = array[i] ** 2
+
+		print(squared)
+
+	instead of using the complete loop to transform array without using loop we use the vectorization so we do 
+
+		squared_vectorized = array ** 2
+
+		print(squared_vectorized)
+
+	instead of loop structure
+
+
+Advanced Multidimensional Array Operations:
+	
+	Advanced Indexing:
+		Ellipsis (...): Used to represent multiple colons in a slice. E.g., array[..., 1] selects all elements in the last column.
+
+	Axis Operations:
+		Sum, Mean, etc., along an axis: Functions like np.sum(array, axis=0) compute the sum along a specified axis.
+
+	Stacking and Splitting Arrays
+		Stacking: np.vstack(), np.hstack(), np.dstack(), np.concatenate().
+		Splitting: np.split(), np.array_split(), np.hsplit(), np.vsplit().
+
+	Mathematical and Statistical Functions
+		Element-wise functions: np.exp(), np.log(), np.sin(), etc.
+		Linear algebra functions: np.dot(), np.linalg.inv(), np.linalg.eig(), etc.
+		Random sampling: np.random.seed(), np.random.permutation(), etc.

@@ -1,0 +1,6 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/letter/480p15/partial_movie_files/IntegralCalculusAnimation/1185818338_634017564_3074841899.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/letter/480p15/partial_movie_files/IntegralCalculusAnimation/624642324_47112247_3540433495.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/letter/480p15/partial_movie_files/IntegralCalculusAnimation/624642324_3705040292_2456721497.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/letter/480p15/partial_movie_files/IntegralCalculusAnimation/624642324_3393227026_3159539128.mp4'
+file 'file:C:/Users/parim/Dev/GitUpload/Team-Alpha/media/videos/letter/480p15/partial_movie_files/IntegralCalculusAnimation/624642324_1141282389_4103691154.mp4'

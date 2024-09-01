@@ -1,0 +1,78 @@
+DATE:
+
+Animating Graphs and Plots in Manim:
+
+	Use matplotlib and numpy for graphing and data manipulation.
+
+	Create the plot:
+
+		import numpy as np
+		import matplotlib.pyplot as plt
+		from manim import *
+
+		x = np.linspace(-3, 3, 100)
+		y = np.sin(x)
+		plt.plot(x, y)
+		plt.savefig("plot.png")  
+	
+	and then using manim used the saved image animate the plot
+
+		class PlotAnimation(Scene):
+	    def construct(self):
+
+	        plot = ImageMobject("plot.png")
+	        self.play(FadeIn(plot))
+	        self.play(plot.animate.shift(2*RIGHT))
+	        self.play(FadeOut(plot))
+
+
+3D Animations and Scene Management:
+	
+	Creating 3D scenes using ThreeDScene class
+
+		from manim import *
+
+		class ThreeDExample(ThreeDScene):
+		    def construct(self):
+		        sphere = Sphere()
+		        self.play(Create(sphere))
+		        self.play(Rotate(sphere, angle=PI/4, axis=RIGHT))
+
+	for scene management you can use:
+		
+		Adding Objects: Use self.add() to include objects in the scene.
+		Removing Objects: Use self.remove() to exclude objects from the scene.
+
+
+Camera Controls and Varying Perspectives:
+	
+	Camera Controls:
+
+		Set Camera Position: Use self.camera.frame.set() to adjust the camera's position.
+		Zooming: self.camera.frame.scale(factor)
+
+		Example:
+
+			class CameraControlExample(ThreeDScene):
+		    def construct(self):
+		        sphere = Sphere()
+		        self.play(Create(sphere))
+		        self.camera.frame.set(width=5)  # Zoom out
+		        self.play(self.camera.frame.animate.shift(2*RIGHT))
+
+	Varying Perspectives:
+
+		Rotate Camera: Adjust camera angles using self.camera.frame.set_euler_angles().
+
+		Example:
+
+			class PerspectiveExample(ThreeDScene):
+		    def construct(self):
+		        sphere = Sphere()
+		        self.play(Create(sphere))
+		        self.play(self.camera.frame.animate.set_euler_angles(theta=30*DEGREES, phi=60*DEGREES))
+
+		
+
+	
+
