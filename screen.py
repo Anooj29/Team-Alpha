@@ -1,6 +1,6 @@
 from manim import *
 
-class FourScreensFromDot(Scene):
+class ScreenDisplay(Scene):
     config.pixel_height = 1080
     config.pixel_width = 1920
     config.frame_height = 18.0
